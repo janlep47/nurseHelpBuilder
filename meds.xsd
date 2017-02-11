@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="medication">
+		<xs:complexType>
+			
+			<xs:sequence>
+				<xs:element name="genericName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				
+				<xs:element name="tradeName">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				
+				<xs:element name="dosage" type="xs:float">
+				</xs:element>
+				
+				<xs:element name="dosageUnits">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				
+				<xs:element name="dosageRoute">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				
+				<xs:element name="dosageFrequency">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="40"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+
+				<xs:element name="timesToGive" maxOccurs="unbounded" minOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="adminTime" maxOccurs="24" minOccurs="1" type="xs:time">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="listFirst" use="required"> 
+                                <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                                <xs:enumeration value="genericName"/>
+                                                <xs:enumeration value="tradeName"/>
+                                        </xs:restriction>
+                                </xs:simpleType>
+                        </xs:attribute> 
+			<xs:attribute name="time" use="required"> 
+                                <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                                <xs:enumeration value="military"/>
+                                                <xs:enumeration value="standard"/>
+                                        </xs:restriction>
+                                </xs:simpleType>
+                        </xs:attribute> 
+
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

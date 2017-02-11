@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<medication listFirst="genericName" time="military">
+<genericName>aspirin</genericName>
+<tradeName>Bayer</tradeName>
+<dosage>350.0</dosage>
+<dosageUnits>mg</dosageUnits>
+<dosageRoute>oral</dosageRoute>
+<dosageFrequency>BID</dosageFrequency>
+<timesToGive>
+  <adminTime>9AM</adminTime>
+  <adminTime>9PM</adminTime>
+</timesToGive>
+<nextDosageDue>02/11/17 17:00</nextDosageDue>
+</medication>
