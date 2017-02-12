@@ -27,7 +27,7 @@ more information on how to create schema files.
 
 Once the schema files have been defined, create the output .java files from the 
 command line:
-'xjc -p <your-package> <your-file.xsd> -d <your-subdirectory>'
+**xjc -p your-package your-file.xsd -d your-subdirectory**
 
 ## License
 See LICENSE.md
